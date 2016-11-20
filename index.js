@@ -7,8 +7,22 @@ const PORT=12001;
 
 var config = {
   "resources": [
-    { name: "cat", isMultiple: true, isWritable: true },
-    { name: "dog", isMultiple: true, isWritable: true },
+    { name: "cat",
+      isMultiple: true,
+      isWritable: true,
+      model:[
+        {"type":"cms.string", "field": "name", "name": "name"},
+        {"type":"cms.int", "field": "age", "name": "age"},
+      ]
+    },
+    { name: "dog",
+      isMultiple: true,
+      isWritable: true,
+      model:[
+        {"type":"cms.string", "field": "name", "name": "name"},
+        {"type":"cms.int", "field": "age", "name": "age"},
+      ]
+    },
     { name: "shoe", isMultiple: true, isWritable: true },
   ]
 };
